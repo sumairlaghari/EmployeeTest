@@ -3,19 +3,11 @@ import {create} from 'apisauce';
 import { errorMessage } from './notificationMessage';
 
 export const errorHandler = err => {
-  let msg = 'Network Request Failed.';
-
   if(err?.data?.message === 'Unauthenticated.'){
     //store?.dispatch({type:GlobalImports.types.Logout})
     return 'Unauthenticated';
   }
-
-  if (parseInt(err?.status) === 422) {
-    msg = String(Object.values(err?.data['errors'])[0][0]);
-  } else {
-    msg = err?.response?.data?.error;
-  }
-  return msg;
+  return err?.data?.message;
 };
 
 const API = create({

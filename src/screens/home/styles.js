@@ -75,14 +75,13 @@ const getStyles = colors => StyleSheet.create({
     fontSize:GlobalImports.rfv(12),
   },
   compViewButton:{
-    width:GlobalImports.wp2(64),
+    width:GlobalImports.wp2(24),
     height:GlobalImports.hp2(4),
     borderRadius:GlobalImports.wp2(2),
     alignItems:'center',
     justifyContent:'center',
     backgroundColor:'green',
     alignSelf:'center',
-    marginTop:GlobalImports.hp2(2),
   },
   compOptionsButton:{
     position:'absolute',
@@ -91,5 +90,59 @@ const getStyles = colors => StyleSheet.create({
     top:GlobalImports.hp2(1),
   },
   //---End---//
+
+  createEmployeeContainer:{
+    flex:1,
+    alignItems: 'center', 
+    justifyContent: 'center', 
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  },
+  inputWrap:{
+    width:GlobalImports.wp2(80),
+    padding:20,
+    overflow:'hidden',
+    backgroundColor:'#2B2D2E',
+    borderRadius:10,
+  },
+  crossButton:{
+    backgroundColor:colors.commonWhite,
+    width:GlobalImports.wp2(6),
+    height:GlobalImports.wp2(6),
+    borderRadius:100,
+    alignItems:'center',
+    overflow:'hidden',
+    justifyContent:'center',
+    position:'absolute',
+    top:GlobalImports.hp2(1),
+    right:GlobalImports.wp2(2),
+    zIndex:9,
+  },
+  inputFieldsComp:{
+    flexDirection:'row', 
+    alignItems:'center', 
+    justifyContent:'space-between',
+    marginVertical:10,
+  },
+  inputContainer:{
+    width: GlobalImports.wp2(54),
+    height:GlobalImports.hp2(4),
+    borderBottomWidth:1,
+    borderColor:'#FFFFFF',
+  },
+  input:{
+    flex: 1,
+    color: colors?.commonWhite,
+  },
+  submitButton:{
+    backgroundColor:'#FFFFFF',
+    width:GlobalImports.wp2(60),
+    height:GlobalImports.hp2(5),
+    borderRadius:GlobalImports.wp2(2),
+    alignItems:'center',
+    overflow:'hidden',
+    justifyContent:'center',
+    alignSelf:'center',
+    marginTop:GlobalImports.hp2(2),
+  },
 });
 export default getStyles;
